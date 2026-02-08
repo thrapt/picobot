@@ -80,6 +80,12 @@ go build -o picobot ./cmd/picobot
 ./picobot gateway                     # long-running mode with Telegram
 ```
 
+## Architecture
+
+<p>
+  <img src="how-it-works.png" alt="How Picobot Works" width="600">
+</p>
+
 ## Features
 
 ### 11 Built-in Tools
