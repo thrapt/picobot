@@ -159,7 +159,7 @@ Copy the token — you'll need it in the next step.
 
 To restrict who can talk to your bot, you need your numeric Telegram user ID.
 
-Send a message to [@userinfobot](https://t.me/userinfobot) on Telegram — it will reply with your user ID (a number like `8281248569`).
+Send a message to [@userinfobot](https://t.me/userinfobot) on Telegram — it will reply with your user ID (a number like `8881234567`).
 
 ### 5. Configure Picobot
 
@@ -171,7 +171,7 @@ Edit `~/.picobot/config.json` and add your Telegram settings:
     "telegram": {
       "enabled": true,
       "token": "123456789:ABCdefGHIjklMNOpqrsTUVwxyz",
-      "allowFrom": ["8281248569"]
+      "allowFrom": ["8881234567"]
     }
   }
 }

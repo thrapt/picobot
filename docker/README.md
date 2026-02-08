@@ -7,16 +7,13 @@ Run Picobot as a Docker container — one command to start.
 ### Option 1: Docker Compose (Recommended)
 
 ```sh
-# 1. Create your .env file
-cp docker/.env.example docker/.env
-
-# 2. Edit .env with your API key and settings
+# 1. Create .env with your API key and settings
 nano docker/.env
 
-# 3. Start
+# 2. Start
 docker compose -f docker/docker-compose.yml up -d
 
-# 4. Check logs
+# 3. Check logs
 docker compose -f docker/docker-compose.yml logs -f
 ```
 
@@ -33,21 +30,8 @@ docker run -d \
   -e OPENROUTER_API_KEY="sk-or-v1-YOUR_KEY" \
   -e PICOBOT_MODEL="google/gemini-2.5-flash" \
   -e TELEGRAM_BOT_TOKEN="123456:ABC..." \
-  -e TELEGRAM_ALLOW_FROM="8281248569" \
-  -v picobot-data:/home/picobot/.picobot \
-  picobot
-```
-
-### Option 3: Mount Your Own Config
-
-If you already have a `config.json`, mount it directly:
-
-```sh
-docker run -d \
-  --name picobot \
-  --restart unless-stopped \
-  -v /path/to/your/config.json:/home/picobot/.picobot/config.json \
-  -v picobot-data:/home/picobot/.picobot/workspace \
+  -e TELEGRAM_ALLOW_FROM="8881234567" \
+  -v ./picobot-data:/home/picobot/.picobot \
   picobot
 ```
 
@@ -59,22 +43,6 @@ docker run -d \
 | `PICOBOT_MODEL` | No | `google/gemini-2.5-flash` | LLM model to use |
 | `TELEGRAM_BOT_TOKEN` | No | — | Telegram bot token from @BotFather |
 | `TELEGRAM_ALLOW_FROM` | No | — | Comma-separated Telegram user IDs |
-
-## Management
-
-```sh
-# Stop
-docker compose -f docker/docker-compose.yml down
-
-# Rebuild after code changes
-docker compose -f docker/docker-compose.yml up -d --build
-
-# View logs
-docker compose -f docker/docker-compose.yml logs -f
-
-# Shell into container
-docker exec -it picobot sh
-```
 
 ## Data Persistence
 

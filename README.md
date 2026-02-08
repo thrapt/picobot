@@ -219,7 +219,7 @@ cmd/picobot/          CLI entry point
 embeds/               Embedded assets (sample skills)
 internal/
   agent/              Agent loop, context, tools, skills
-  bus/                Event bus
+  chat/               Chat message hub
   channels/           Telegram (more coming)
   config/             Config schema, loader, onboarding
   cron/               Cron scheduler
@@ -229,6 +229,17 @@ internal/
   session/            Session manager
 docker/               Dockerfile, compose, entrypoint
 ```
+
+## Roadmap
+
+- [x] Add Telegram support
+- [ ] Add WhatsApp support
+- [ ] Add Discord support
+- [x] Skill creation by AI agent
+- [ ] Integrate with more useful skills by default
+- [ ] Add more useful tools (email, calendar, file processing, etc.)
+
+Want to contribute? Open an issue or PR with your ideas!
 
 ## Docs
 

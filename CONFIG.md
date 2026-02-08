@@ -156,7 +156,7 @@ Chat channel integrations. Currently supports Telegram.
     "telegram": {
       "enabled": true,
       "token": "123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11",
-      "allowFrom": ["8281248569"]
+      "allowFrom": ["8881234567"]
     }
   }
 }

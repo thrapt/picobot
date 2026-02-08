@@ -16,7 +16,7 @@ embeds/               Embedded assets (sample skills bundled into binary)
   skills/             Sample skills extracted on onboard
 internal/
   agent/              Agent loop, context, tools, skills
-  bus/                Event bus (Inbound / Outbound channels)
+  chat/               Chat message hub (Inbound / Outbound channels)
   channels/           Telegram integration
   config/             Config schema, loader, onboarding
   cron/               Cron scheduler
