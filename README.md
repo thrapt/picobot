@@ -38,7 +38,7 @@ Picobot runs happily on a **$5/mo VPS**, a Raspberry Pi, or even an old Android 
 docker run -d --name picobot \
   -e OPENAI_API_KEY="your-key" \
   -e OPENAI_API_BASE="https://openrouter.ai/api/v1" \
-  -e PICOBOT_MODEL="google/gemini-2.5-flash" \
+  -e PICOBOT_MODEL="openrouter/free" \
   -e TELEGRAM_BOT_TOKEN="your-telegram-token" \
   -v ./picobot-data:/home/picobot/.picobot \
   --restart unless-stopped \
@@ -60,7 +60,7 @@ services:
     environment:
       - OPENAI_API_KEY=your-key
       - OPENAI_API_BASE=https://openrouter.ai/api/v1
-      - PICOBOT_MODEL=google/gemini-2.5-flash
+      - PICOBOT_MODEL=openrouter/free
       - TELEGRAM_BOT_TOKEN=your-telegram-token
       - TELEGRAM_ALLOW_FROM=your-user-id
     volumes:

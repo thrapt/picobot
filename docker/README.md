@@ -29,7 +29,7 @@ docker run -d \
   --restart unless-stopped \
   -e OPENAI_API_KEY="sk-or-v1-YOUR_KEY" \
   -e OPENAI_API_BASE="https://openrouter.ai/api/v1" \
-  -e PICOBOT_MODEL="google/gemini-2.5-flash" \
+  -e PICOBOT_MODEL="openrouter/free" \
   -e TELEGRAM_BOT_TOKEN="123456:ABC..." \
   -e TELEGRAM_ALLOW_FROM="8881234567" \
   -e DISCORD_BOT_TOKEN="MTIzNDU2..." \
