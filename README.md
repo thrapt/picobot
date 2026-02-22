@@ -3,7 +3,7 @@
   <h1 align="center">Picobot</h1>
   <p align="center"><strong>The AI agent that runs anywhere — even on a $5 VPS.</strong></p>
   <p align="center">
-    <img src="https://img.shields.io/badge/binary-~10MB-brightgreen" alt="Binary Size">
+    <img src="https://img.shields.io/badge/binary-~9MB-brightgreen" alt="Binary Size">
     <img src="https://img.shields.io/badge/docker-~28MB-blue" alt="Docker Size">
     <img src="https://img.shields.io/badge/built_with-Go-00ADD8?logo=go" alt="Go">
     <img src="https://img.shields.io/badge/RAM-~10MB-orange" alt="Memory Usage">
@@ -14,7 +14,7 @@
 
 ---
 
-Love the idea of open-source AI agents like [OpenClaw](https://github.com/openclaw/openclaw) but tired of the bloat? **Picobot** gives you the same power — persistent memory, tool calling, skills, Telegram and Discord integration — in a single ~10MB binary that boots in milliseconds.
+Love the idea of open-source AI agents like [OpenClaw](https://github.com/openclaw/openclaw) but tired of the bloat? **Picobot** gives you the same power — persistent memory, tool calling, skills, Telegram and Discord integration — in a single ~9MB binary that boots in milliseconds.
 
 No Python. No Node. No 500MB container. Just one Go binary and a config file.
 
@@ -22,7 +22,7 @@ No Python. No Node. No 500MB container. Just one Go binary and a config file.
 
 | | Picobot | Typical Agent Frameworks |
 |---|---|---|
-| **Binary size** | ~10MB | 200MB+ (Python + deps) |
+| **Binary size** | ~9MB | 200MB+ (Python + deps) |
 | **Docker image** | ~28MB (Alpine) | 500MB–1GB+ |
 | **Cold start** | Instant | 5–30 seconds |
 | **RAM usage** | ~10MB idle | 200MB–1GB |
