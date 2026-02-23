@@ -76,7 +76,20 @@ func NewRootCmd() *cobra.Command {
 				fmt.Fprintf(os.Stderr, "WhatsApp setup failed: %v\n", err)
 				return
 			}
-			fmt.Println("\nWhatsApp setup complete! You can now enable it in your config and start the gateway.")
+
+			// Activate the channel in config.json automatically.
+			cfg.Channels.WhatsApp.Enabled = true
+			cfg.Channels.WhatsApp.DBPath = dbPath
+			cfgPath, _, err := config.ResolveDefaultPaths()
+			if err == nil {
+				if saveErr := config.SaveConfig(cfg, cfgPath); saveErr != nil {
+					fmt.Fprintf(os.Stderr, "warning: could not save config: %v\n", saveErr)
+				} else {
+					fmt.Printf("Config updated: whatsapp enabled, dbPath set to %s\n", dbPath)
+				}
+			}
+
+			fmt.Println("\nWhatsApp setup complete! Run 'picobot gateway' to start.")
 		},
 	})
 
